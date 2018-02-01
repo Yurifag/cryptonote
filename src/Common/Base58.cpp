@@ -85,12 +85,19 @@ namespace Tools
         switch (9 - size)
         {
         case 1:            res |= *data++;
+        // fall through
         case 2: res <<= 8; res |= *data++;
+        // fall through
         case 3: res <<= 8; res |= *data++;
+        // fall through
         case 4: res <<= 8; res |= *data++;
+        // fall through
         case 5: res <<= 8; res |= *data++;
+        // fall through
         case 6: res <<= 8; res |= *data++;
+        // fall through
         case 7: res <<= 8; res |= *data++;
+        // fall through
         case 8: res <<= 8; res |= *data; break;
         default: assert(false);
         }
