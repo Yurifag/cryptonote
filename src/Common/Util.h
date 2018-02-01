@@ -14,4 +14,10 @@ namespace Tools
   bool create_directories_if_necessary(const std::string& path);
   std::error_code replace_file(const std::string& replacement_name, const std::string& replaced_name);
   bool directoryExists(const std::string& path);
+
+  #if EAGAIN == EWOULDBLOCK
+    #define EAGAIN_OR_WOULDBLOCK(e) ((e) == EAGAIN)
+  #else
+    #define EGAIN_OR_WOULDBLOCK(e) ((e) == EAGAIN || (e) == EWOULDBLOCK)
+  #endif
 }
