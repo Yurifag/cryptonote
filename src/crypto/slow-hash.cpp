@@ -49,11 +49,7 @@ namespace Crypto {
     mlock(data, MAP_SIZE);
   }
 
-  cn_context::~cn_context() {
-    if (munmap(data, MAP_SIZE) != 0) {
-      throw bad_alloc();
-    }
-  }
+  cn_context::~cn_context() = default;
 
 #endif
 
