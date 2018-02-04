@@ -20,7 +20,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(1000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(1000000000);
 const unsigned EMISSION_SPEED_FACTOR                         = 18;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -67,7 +67,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "samcoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001e61d029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101e15a89de7bb17942725add547e21d93d2d419beaffb36618ea662aa898d7d2d1";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -96,7 +96,8 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const std::initializer_list<const char*> SEED_NODES = {
-  "91.121.178.8:13510"
+  "grzb.de:13510",
+  "grzb.de:13511"
 };
 
 struct CheckpointData {
