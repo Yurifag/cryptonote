@@ -20,7 +20,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000 * 1000000000); //coins in satoshi (1/100000000)
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000 * 100000000); //coins in satoshi (1/100000000)
 const unsigned EMISSION_SPEED_FACTOR                         = 22;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -28,15 +28,13 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
-//TODO Define number of digits
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 10;
 const uint64_t MINIMUM_FEE                                   = 100000;
 const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
 
 const uint64_t DIFFICULTY_TARGET                             = 69; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
-//TODO There are options to tune CryptoNote's difficulty retargeting function.
-//TODO We recommend not to change it.
+
 const size_t   DIFFICULTY_WINDOW                             = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
 const size_t   DIFFICULTY_CUT                                = 60;  // timestamps to cut after sorting
 const size_t   DIFFICULTY_LAG                                = 15;
@@ -67,7 +65,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "samcoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001f6c2d7e858029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210198625cbad588ca6b53d5b7979762547b35907cc6bf2a0721e3e6ef3c87aa97c7";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001b9c29101029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101e17a8a9fb4a81610cffe3550b0fdce9abcac85c01f1713078ed8382a8f2f08bf";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
