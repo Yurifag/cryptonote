@@ -67,7 +67,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "samcoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001e61d029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101e15a89de7bb17942725add547e21d93d2d419beaffb36618ea662aa898d7d2d1";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001f6c2d7e858029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210198625cbad588ca6b53d5b7979762547b35907cc6bf2a0721e3e6ef3c87aa97c7";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
